@@ -1,0 +1,636 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  /* Layout */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 1300px;
+    max-width: 100%;
+  }
+  
+  /* Navbar */
+  .navbar { 
+    color: white;
+    padding: 1rem 2rem;
+    width: 1280px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(192, 185, 185);
+  }
+  
+  /* Cover Section */
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  
+  .school {
+    width: 800px;
+    max-width: 100%;
+    position: absolute;
+    top: 2rem;
+  }
+  
+  /* Social Container */
+  .social-container {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .social:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social i {
+    font-size: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social:hover i {
+    transform: scale(1.2);
+  }
+  
+  /* Square Image */
+  .square {
+    width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 10px;  
+  }
+  
+  .square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Typography */
+  .cover h2 {
+    font-size: 65px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  .text p {
+    width: 800px;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+  
+  /* Common Section Styles */
+  .overview, .skills, .projects {
+    padding: 2rem 2rem; 
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  /* Card Styles */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .card {
+    flex: 1 1 calc(25% - 30px);
+    min-width: 200px;
+    border: 2px solid #ccc; 
+    border-radius: 30px; 
+    height: 400px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+  }
+  
+  .card-front {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .card-back textarea {
+    width: 90%;
+    height: 90%;
+    border: none;
+    resize: none;
+    font-size: 20px;
+    padding: 10px;
+    background: transparent;
+  }
+  
+  /* Card Overview */
+  .cardOverview {
+    flex: 1 1 calc(25% - 30px);
+    min-width: 200px;
+    margin: 0;
+    padding: 2em;
+    width: 285.96px;
+    height: 400px;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center; 
+    display: flex;
+    cursor: pointer;
+  }
+  
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .cardOverview::after, .cardOverview::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 6s spin linear infinite;
+  }
+  
+  .cardOverview::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  
+  @keyframes spin {
+    from { --angle: 0deg; }
+    to { --angle: 360deg; }
+  }
+  
+  /* View Certificate Button */
+  .view-certificate {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .view-certificate:hover {
+    background-color: #0056b3;
+  }
+  
+  /* AI Chat */
+  .ai-chat-card .card-back {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+  }
+  
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  #chat-messages div {
+    margin-bottom: 8px;
+  }
+  
+  #user-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  #send-button {
+    width: 100%;
+    padding: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  #send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Blob and Blur Effects */
+  #blob {
+    height: 400px;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+  }
+  
+  #blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(200px);
+  }
+  
+  @keyframes rotate {
+    from { rotate: 0deg; }
+    50% { scale: 1 1.5; }
+    to { rotate: 360deg; }
+  }
+  
+  /* CRUD Function */
+  .card-back form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .card-back input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .card-back button {
+    padding: 10px 20px; 
+    font-size: 18px; 
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .card-back button:hover {
+    background-color: #0056b3;
+  }
+  
+  #data-container {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .data-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .data-entry button {
+    margin-left: 5px;
+  }
+  
+  .editing input {
+    margin-right: 5px;
+  }
+  
+  /* Authentication */
+  #auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  
+  #register-form, #login-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #auth-container input, #auth-container button {
+    margin: 5px 0;
+    padding: 5px;
+  }
+  
+  #auth-message {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  /* Slideshow */
+  #slideshow-overlay,
+  #aws-slideshow-overlay,
+  #programming-slideshow-overlay,
+  #d4vd-slideshow-overlay,
+  #inflation-slideshow-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #slideshow-overlay.hidden,
+  #aws-slideshow-overlay.hidden,
+  #programming-slideshow-overlay.hidden,
+  #d4vd-slideshow-overlay.hidden,
+  #inflation-slideshow-overlay.hidden {
+    display: none;
+  }
+  
+  #slideshow-container,
+  #aws-slideshow-container,
+  #programming-slideshow-container,
+  #d4vd-slideshow-container,
+  #inflation-slideshow-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .slideshow-slide,
+  .aws-slideshow-slide,
+  .programming-slideshow-slide,
+  .d4vd-slideshow-slide,
+  .inflation-slideshow-slide {
+    display: none;
+  }
+  
+  .slideshow-slide.active,
+  .aws-slideshow-slide.active,
+  .programming-slideshow-slide.active,
+  .d4vd-slideshow-slide.active,
+  .inflation-slideshow-slide.active {
+    display: block;
+  }
+  
+  .slideshow-slide img,
+  .aws-slideshow-slide img,
+  .programming-slideshow-slide img,
+  .d4vd-slideshow-slide img,
+  .inflation-slideshow-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+  }
+  
+  .slideshow-slide p,
+  .aws-slideshow-slide p,
+  .programming-slideshow-slide p,
+  .d4vd-slideshow-slide p,
+  .inflation-slideshow-slide p {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+  }
+  
+  #prev-slide, #next-slide,
+  #aws-prev-slide, #aws-next-slide,
+  #programming-prev-slide, #programming-next-slide,
+  #d4vd-prev-slide, #d4vd-next-slide,
+  #inflation-prev-slide, #inflation-next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #prev-slide, #aws-prev-slide,
+  #programming-prev-slide, #d4vd-prev-slide,
+  #inflation-prev-slide {
+    left: 10px;
+  }
+  
+  #next-slide, #aws-next-slide,
+  #programming-next-slide, #d4vd-next-slide,
+  #inflation-next-slide {
+    right: 10px;
+  }
+  
+  #close-slideshow, #aws-close-slideshow,
+  #programming-close-slideshow, #d4vd-close-slideshow,
+  #inflation-close-slideshow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #333;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+    }
+    .card, .cardOverview {
+      flex: 1 1 calc(50% - 30px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cover {
+      height: auto;
+      min-height: 600px;
+    }
+    .school {
+      position: static;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .circle {
+      position: static;
+      margin: 2rem auto 0;
+    }
+    .card, .cardOverview {
+      flex: 1 1 100%;
+    }
+  }
