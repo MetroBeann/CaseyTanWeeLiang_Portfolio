@@ -4,68 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Casey's Portfolio - IT Professional with expertise in Web Development, Cloud Architecture, and Project Management">
     <title>Casey's Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/casey.jpg" as="image">
+    <!-- Add favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="background">
-        <div id="blob"></div>
-        <div id="blur"></div>
+        <div id="blob" aria-hidden="true"></div>
+        <div id="blur" aria-hidden="true"></div>
     </div>
 
     <div class="content">
         <div class="container">
-            <!--Nav Bar-->
-            <nav class="navbar">
-                <div class="row">
-                    <div class="logo">Casey's Portfolio</div>
-                    <div class="nav-links">
-                        <a href="#about">About</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#projects">Projects</a>
+            <!-- Header with Nav Bar -->
+            <header>
+                <nav class="navbar" aria-label="Main navigation">
+                    <div class="row">
+                        <div class="logo">Casey's Portfolio</div>
+                        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="nav-links">
+                            <a href="#about" aria-label="About section">About</a>
+                            <a href="#skills" aria-label="Skills section">Skills</a>
+                            <a href="#projects" aria-label="Projects section">Projects</a>
+                            <a href="#contact" aria-label="Contact section">Contact</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </header>
 
-            <!--Cover Page-->
-            <div class="cover">
+            <!-- Cover Page -->
+            <section class="cover">
                 <div class="school">
+                    <h1>Casey Tan Wee Liang</h1>
                     <h2>Ngee Ann Polytechnic</h2>
-                    <br>
                     <h2>Diploma in Information Technology</h2>
                 </div>
             
                 <div class="social-container">
                     <div class="social">
-                        <a href="https://www.linkedin.com/in/casey-tan-wee-liang-0703ba273/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/casey-tan-wee-liang-0703ba273/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </div>
                     <div class="social">
-                        <a href="tel:+6587823921" target="_blank">
-                            <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+6587823921" aria-label="Phone Number: +65 8782 3921">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
                         </a>
                     </div>
                     <div class="social">
-                        <a href="mailto:tancaseyy@gmail.com" target="_blank">
-                            <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:tancaseyy@gmail.com" aria-label="Email: tancaseyy@gmail.com">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             
                 <div class="square">
-                    <img src="assets/casey.jpg" alt="Square Image">
+                    <img src="assets/casey.jpg" alt="Casey Tan Wee Liang - Portfolio Profile Picture" loading="eager">
                 </div>
-            </div>
+            </section>
 
-            <!--Overview-->
-            <div id="about" class="overview">
-                <p>INTRODUCTION</p>
-                <h1>Overview</h1>
-                <br>
+            <!-- Overview -->
+            <section id="about" class="overview">
+                <p class="section-subtitle">INTRODUCTION</p>
+                <h2 class="section-title">Overview</h2>
                 <div class="text">
                     <p>As a driven and enthusiastic student in the School of Information Technology, I possess a keen
                         interest in acquiring new knowledge and skillsets. I excel in team environments and consistently
@@ -73,413 +82,578 @@
                         grow. Therefore, I'm excited to apply my skills and enthusiasm in this internship.</p>
                 </div>
                 <div class="cards">
-                    <div class="cardOverview">Web Developer</div>
-                    <div class="cardOverview">Project Manager</div>
-                    <div class="cardOverview">Cloud Architect</div>
-                    <div class="cardOverview">Programmer</div>
+                    <div class="cardOverview" tabindex="0">Web Developer</div>
+                    <div class="cardOverview" tabindex="0">Project Manager</div>
+                    <div class="cardOverview" tabindex="0">Cloud Architect</div>
+                    <div class="cardOverview" tabindex="0">Programmer</div>
                 </div>
-            </div>
+            </section>
 
-            <!--Skills-->
-            <div id="skills" class="skills">
-                <p>WHAT I LEARNT</p>
-                <h1>Skills</h1>
-                <br>
-                <br>
+            <!-- Skills -->
+            <section id="skills" class="skills">
+                <p class="section-subtitle">WHAT I LEARNED</p>
+                <h2 class="section-title">Skills</h2>
+                
+                <!-- Tech Stack Icons -->
+                <div class="tech-stack">
+                    <h3>My Technology Stack</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon" title="GitHub">
+                            <img src="assets/tech/github.png" alt="GitHub">
+                        </div>
+                        <div class="tech-icon" title="Visual Studio Code">
+                            <img src="assets/tech/vscode.png" alt="Visual Studio Code">
+                        </div>
+                        <div class="tech-icon" title="Visual Studio">
+                            <img src="assets/tech/visual-studio.png" alt="Visual Studio">
+                        </div>
+                        <div class="tech-icon" title="Python">
+                            <img src="assets/tech/python.png" alt="Python">
+                        </div>
+                        <div class="tech-icon" title="C#">
+                            <img src="assets/tech/csharp.png" alt="C#">
+                        </div>
+                        <div class="tech-icon" title="HTML5">
+                            <img src="assets/tech/HTML5.png" alt="HTML5">
+                        </div>
+                        <div class="tech-icon" title="CSS3">
+                            <img src="assets/tech/CSS3.png" alt="CSS3">
+                        </div>
+                        <div class="tech-icon" title="JavaScript">
+                            <img src="assets/tech/javascript.png" alt="JavaScript">
+                        </div>
+                        <div class="tech-icon" title="Bootstrap">
+                            <img src="assets/tech/Bootstrap.png" alt="Bootstrap">
+                        </div>
+                        <div class="tech-icon" title="Node.js">
+                            <img src="assets/tech/Node.js.png" alt="Node.js">
+                        </div>
+                        <div class="tech-icon" title="AWS">
+                            <img src="assets/tech/AWS.png" alt="AWS">
+                        </div>
+                        <div class="tech-icon" title="Canva">
+                            <img src="assets/tech/Canva.png" alt="Canva">
+                        </div>
+                        <div class="tech-icon" title="Figma">
+                            <img src="assets/tech/Figma.png" alt="Figma">
+                        </div>
+                        <div class="tech-icon" title="Go">
+                            <img src="assets/tech/Go.png" alt="Go">
+                        </div>
+                        <div class="tech-icon" title="PostgresSQL">
+                            <img src="assets/tech/PostgresSQL.png" alt="PostgresSQL">
+                        </div>
+                      
+                    </div>
+                </div>
+                
                 <div class="cards">
-                    <div class="card">
+                    <div class="card" tabindex="0">
                         <div class="card-inner">
                             <div class="card-front">Front-End Development</div>
                             <div class="card-back">
-                                <textarea>Expertise in HTML, CSS, JavaScript, React JS and skilled in UI/UX design with Figma and Framer. Proficient in designing intuitive website flows with Framer.</textarea>
+                                <p class="skill-description">Expertise in HTML, CSS, JavaScript, React JS and skilled in UI/UX design with Figma and Framer. Proficient in designing intuitive website flows with Framer.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" tabindex="0">
                         <div class="card-inner">
                             <div class="card-front">Back-End Development</div>
                             <div class="card-back">
-                                <textarea>Expertise in building robust and scalable applications using Node.js, utilizing Auth.js for authentication, Swagger.js for API documentation, and Microsoft SQL for database management, with strong proficiency in CRUD operations and MVC architecture.</textarea>
+                                <p class="skill-description">Expertise in building robust and scalable applications using Node.js, utilizing Auth.js for authentication, Swagger.js for API documentation, and Microsoft SQL for database management, with strong proficiency in CRUD operations and MVC architecture.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" tabindex="0">
                         <div class="card-inner">
                             <div class="card-front">Project Management</div>
                             <div class="card-back">
-                                <textarea>Experienced developer with expertise in SDLCs, Scrum, and Agile methodologies, utilizing Jira and leading team projects to deliver successful software solutions through effective planning, analysis, design, and testing.</textarea>
+                                <p class="skill-description">Experienced developer with expertise in SDLCs, Scrum, and Agile methodologies, utilizing Jira and leading team projects to deliver successful software solutions through effective planning, analysis, design, and testing.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" tabindex="0">
                         <div class="card-inner">
                             <div class="card-front">Amazon Web Service</div>
                             <div class="card-back">
-                                <textarea>Expertise in building scalable, secure, and performant cloud solutions using AWS services to ensure performance efficiency, high availability, and robust security, with a focus on serverless architecture and automation.</textarea>
+                                <p class="skill-description">Expertise in building scalable, secure, and performant cloud solutions using AWS services to ensure performance efficiency, high availability, and robust security, with a focus on serverless architecture and automation.</p>
                                 <a href="https://www.credly.com/badges/1ae753bc-c4df-414d-a131-6cbbaa03b6f3/public_url"
-                                    target="_blank" class="view-certificate">View Certificate</a>
+                                    target="_blank" rel="noopener" class="view-certificate">View Certificate</a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="cards">
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">UI/UX Design</div>
-                                <div class="card-back">
-                                    <textarea>Skilled in using Canva for poster, Figma for wireframing, Framer and Wix for no-code website design, with expertise in creating user-centered, visually appealing and functional digital experiences through efficient design processes and leveraging industry-leading tools.</textarea>
-                                </div>
+                    <div class="card" tabindex="0">
+                        <div class="card-inner">
+                            <div class="card-front">UI/UX Design</div>
+                            <div class="card-back">
+                                <p class="skill-description">Skilled in using Canva for poster, Figma for wireframing, Framer and Wix for no-code website design, with expertise in creating user-centered, visually appealing and functional digital experiences through efficient design processes and leveraging industry-leading tools.</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">Programming</div>
-                                <div class="card-back">
-                                    <textarea>Expertise in Visual Studio Code and Visual Studio 2022 Community, with strong proficiency in Python and C# programming languages. Adept at utilizing IDE features to optimize coding efficiency and deliver high-quality software solutions.</textarea>
-                                </div>
+                    </div>
+                    <div class="card" tabindex="0">
+                        <div class="card-inner">
+                            <div class="card-front">Programming</div>
+                            <div class="card-back">
+                                <p class="skill-description">Expertise in Visual Studio Code and Visual Studio 2022 Community, with strong proficiency in Python and C# programming languages. Adept at utilizing IDE features to optimize coding efficiency and deliver high-quality software solutions.</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">Data Analytic</div>
-                                <div class="card-back">
-                                    <textarea>Skills in creating interactive dashboards, reports, and visualizations that provide real-time data insights, trend analysis, and performance metrics, enabling stakeholders to make informed decisions, identify areas for improvement, and drive business growth.</textarea>
-                                </div>
+                    </div>
+                    <div class="card" tabindex="0">
+                        <div class="card-inner">
+                            <div class="card-front">Data Analytics</div>
+                            <div class="card-back">
+                                <p class="skill-description">Skills in creating interactive dashboards, reports, and visualizations that provide real-time data insights, trend analysis, and performance metrics, enabling stakeholders to make informed decisions, identify areas for improvement, and drive business growth.</p>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-inner">
-                                <div class="card-front">Generative AI</div>
-                                <div class="card-back">
-                                    <textarea>Expert with expertise in AI chatbots, workflow automation and AWS services, complemented by proficiency in Amazon Inspector and GuardDuty for anomaly detection and security, driving innovative and secure AI solutions.</textarea>
-                                </div>
+                    </div>
+                    <div class="card" tabindex="0">
+                        <div class="card-inner">
+                            <div class="card-front">Generative AI</div>
+                            <div class="card-back">
+                                <p class="skill-description">Expert with expertise in AI chatbots, workflow automation and AWS services, complemented by proficiency in Amazon Inspector and GuardDuty for anomaly detection and security, driving innovative and secure AI solutions.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Projects -->
-            <div id="projects" class="projects">
-                <p>MY WORK</p>
-                <h1>Projects</h1>
+            <!-- Projects Section (Updated) -->
+            <section id="projects" class="projects">
+                <p class="section-subtitle">MY WORK</p>
+                <h2 class="section-title">Projects</h2>
                 <div class="text">
                     <p>Following projects showcases my skills and experience through real-world examples of my work.
                         Each project is briefly described with links to code repositories and live demos in it. It
                         reflects my ability to solve complex problems, work with different technologies, and manage
                         projects effectively.</p>
                 </div>
+                
+                <!-- Project Filter -->
+                <div class="project-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud</button>
+                    <button class="filter-btn" data-filter="management">Project Management</button>
+                    <button class="filter-btn" data-filter="other">Other</button>
+                </div>
+                
                 <div class="cards">
-
-                    <!-- CRUD -->
-                    <div class="card">
+                    <!-- CRUD - Web Development -->
+                    <div class="card project-card" data-category="web" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">CRUD Features</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-database"></i></div>
+                                <h3 class="card-title">CRUD Features</h3>
+                                <p class="card-tag">Web Development</p>
+                            </div>
                             <div class="card-back">
-                                <form id="crud-form">
-                                    <input type="text" id="first-name" placeholder="First Name" required>
-                                    <input type="text" id="last-name" placeholder="Last Name" required>
-                                    <button type="submit" id="submit-btn">Submit</button>
+                                <form id="crud-form" aria-label="CRUD demonstration form">
+                                    <input type="text" id="first-name" placeholder="First Name" required aria-label="First Name">
+                                    <input type="text" id="last-name" placeholder="Last Name" required aria-label="Last Name">
+                                    <button type="submit" id="submit-btn" class="primary-button">Submit</button>
                                 </form>
-                                <div id="data-container"></div>
+                                <div id="data-container" aria-live="polite"></div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Auth.js -->
-                    <div class="card">
+                    <!-- Auth.js - Web Development -->
+                    <div class="card project-card" data-category="web" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">Auth.js</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-lock"></i></div>
+                                <h3 class="card-title">Auth.js</h3>
+                                <p class="card-tag">Web Development</p>
+                            </div>
                             <div class="card-back">
                                 <div id="auth-container">
                                     <div id="register-form">
                                         <h3>Register</h3>
-                                        <input type="text" id="register-username" placeholder="Username">
-                                        <input type="password" id="register-password" placeholder="Password">
-                                        <button id="register-button">Register</button>
+                                        <input type="text" id="register-username" placeholder="Username" aria-label="Register username">
+                                        <input type="password" id="register-password" placeholder="Password" aria-label="Register password">
+                                        <button id="register-button" class="primary-button">Register</button>
                                     </div>
                                     <div id="login-form">
                                         <h3>Login</h3>
-                                        <input type="text" id="login-username" placeholder="Username">
-                                        <input type="password" id="login-password" placeholder="Password">
-                                        <button id="login-button">Login</button>
+                                        <input type="text" id="login-username" placeholder="Username" aria-label="Login username">
+                                        <input type="password" id="login-password" placeholder="Password" aria-label="Login password">
+                                        <button id="login-button" class="primary-button">Login</button>
                                     </div>
-                                    <div id="auth-message"></div>
+                                    <div id="auth-message" aria-live="polite"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- AI Chat -->
-                    <div class="card ai-chat-card">
+                    <!-- AI Chat - Other -->
+                    <div class="card ai-chat-card project-card" data-category="other" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">AI Chat Project</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-robot"></i></div>
+                                <h3 class="card-title">AI Chat Project</h3>
+                                <p class="card-tag">AI Development</p>
+                            </div>
                             <div class="card-back">
                                 <div id="chat-container">
-                                    <div id="chat-messages"></div>
-                                    <input type="text" id="user-input" placeholder="Type your message...">
-                                    <button id="send-button">Send</button>
+                                    <div id="chat-messages" aria-live="polite"></div>
+                                    <div class="chat-input-container">
+                                        <input type="text" id="user-input" placeholder="Type your message..." aria-label="Chat message input">
+                                        <button id="send-button" class="primary-button">Send</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SPM Project -->
-                    <div class="card">
+                    <!-- SPM Project - Project Management -->
+                    <div class="card project-card" data-category="management" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">SPM Project</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                                <h3 class="card-title">SPM Project</h3>
+                                <p class="card-tag">Project Management</p>
+                            </div>
                             <div class="card-back">
-                                <button id="open-slideshow" class="led-button">
-                                    <span>Click here</span>
+                                <p class="project-description">A comprehensive software project management endeavor where I led documentation, task tracking via Jira, and game development.</p>
+                                <button id="open-slideshow" class="led-button" aria-label="Open SPM Project slideshow">
+                                    <span>View Project</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div id="slideshow-overlay" class="hidden">
-                        <div id="slideshow-container">
-                            <div class="slideshow-slide">
-                                <img src="assets/SPM - doc.jpg" alt="Project Management Doc">
-                                <p>The project began with creating a comprehensive document outlining all necessary
-                                    steps to establish a strong foundation. This documentation phase ensured clarity and
-                                    alignment among team members regarding project objectives, scope, and requirements.
-                                    The document covered project goals, timelines, roles, and responsibilities.</p>
-                            </div>
-                            <div class="slideshow-slide">
-                                <img src="assets/SPM - Jira.jpg" alt="Project Management Jira">
-                                <p>Our team used Jira to track progress and manage tasks effectively. This powerful tool
-                                    provided visual progress tracking, clear task assignments, and real-time milestone
-                                    monitoring. Jira fostered collaboration, accountability, and a motivated work
-                                    environment, ensuring our project stayed on track.</p>
-                            </div>
-                            <div class="slideshow-slide">
-                                <img src="assets/SPM - game.jpg" alt="Project Management Game">
-                                <p>The core deliverable of project was the successful development of the game. This
-                                    phase involved designing, testing, and refining the game to meet the project's
-                                    objectives and requirements.</p>
-                            </div>
-                            <div class="slideshow-slide">
-                                <img src="assets/SPM - ppt.jpg" alt="Project Management PPT">
-                                <p>We concluded the project with a comprehensive PowerPoint presentation, summarizing
-                                    our journey, accomplishments, and key takeaways. The presentation showcased the
-                                    game's features, highlighted lessons learned, and provided a final report to
-                                    stakeholders, marking the project's successful completion.</p>
-                            </div>
-                            <button id="prev-slide">&#10094;</button>
-                            <button id="next-slide">&#10095;</button>
-                            <button id="close-slideshow">&times;</button>
-                        </div>
-                    </div>
-
-                    <!-- AWS Project -->
-                    <div class="card">
+                    <!-- AWS Project - Cloud -->
+                    <div class="card project-card" data-category="cloud" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">AWS Project</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fab fa-aws"></i></div>
+                                <h3 class="card-title">AWS Project</h3>
+                                <p class="card-tag">Cloud Architecture</p>
+                            </div>
                             <div class="card-back">
-                                <button id="open-aws-slideshow" class="led-button">
-                                    <span>Click here</span>
+                                <p class="project-description">Designed and implemented both tiered and serverless cloud architectures on AWS, demonstrating expertise in cloud-native application development.</p>
+                                <button id="open-aws-slideshow" class="led-button" aria-label="Open AWS Project slideshow">
+                                    <span>View Project</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div id="aws-slideshow-overlay" class="hidden">
-                        <div id="aws-slideshow-container">
-                            <div class="aws-slideshow-slide">
-                                <img src="assets/CAT - doc.jpg" alt="Cloud Doc">
-                                <p>Our AWS cloud project began with a comprehensive document outlining our strategy and
-                                    progress tracking. This clarity ensured alignment among team members.</p>
-                            </div>
-                            <div class="aws-slideshow-slide">
-                                <img src="assets/CAT - server.jpg" alt="Cloud Tier Application">
-                                <p>Next, we designed network architectures for tier and serverless applications. The
-                                    tier application featured a traditional, multi-layered infrastructure, while the
-                                    serverless design leveraged AWS Lambda functions and API Gateway for scalability and
-                                    reduced overhead.</p>
-                            </div>
-                            <div class="aws-slideshow-slide">
-                                <img src="assets/CAT - serverless.jpg" alt="Cloud Serverless Application">
-                            </div>
-                            <div class="aws-slideshow-slide">
-                                <img src="assets/CAT - slides.jpg" alt="Cloud Slides">
-                                <p>Upon completion, we created a concise slide presentation summarizing our technical
-                                    decisions, architectural designs, and key takeaways. This final deliverable
-                                    showcased our expertise in designing and deploying secure, scalable cloud-based
-                                    solutions on AWS.</p>
-                            </div>
-
-                            <button id="aws-prev-slide">&#10094;</button>
-                            <button id="aws-next-slide">&#10095;</button>
-                            <button id="aws-close-slideshow">&times;</button>
-                        </div>
-                    </div>
-
-                    <!-- Programming -->
-                    <div class="card">
+                    <!-- Southeast Asia Readiness - Web Development -->
+                    <div class="card project-card" data-category="web" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">Southeast Asia Readiness</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-globe-asia"></i></div>
+                                <h3 class="card-title">Southeast Asia Readiness</h3>
+                                <p class="card-tag">Web Development</p>
+                            </div>
                             <div class="card-back">
-                                <button id="open-programming-slideshow" class="led-button">
-                                    <span>Click here</span>
+                                <p class="project-description">Educational website built with MVC architecture and user authentication to provide information about Southeast Asian countries.</p>
+                                <button id="open-programming-slideshow" class="led-button" aria-label="Open Southeast Asia Readiness slideshow">
+                                    <span>View Project</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div id="programming-slideshow-overlay" class="hidden">
-                        <div id="programming-slideshow-container">
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea1.jpg" alt="Programming slide 1">
-                                <p>Created a Southeast Asia readiness educational website utilizing MVC backend
-                                    architecture and auth.js for user authentication, distinguishing between guest and
-                                    admin access.</p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea2.jpg" alt="Programming slide 2">
-                                <p>Upon successful login, users are directed to the dynamic homepage, featuring a
-                                    slideshow-like background that transitions intervally, showcasing multiple images.
-                                </p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea3.jpg" alt="Programming slide 2">
-                                <p>After clicking "Blog Posts", the system utilizes CRUD functionality to retrieve and
-                                    display blog entries from the MSSQL database.</p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea4.jpg" alt="Programming slide 2">
-                                <p>Users can perform CRUD operations (Create, Update, Delete) on blog posts, dynamically
-                                    updating the MSSQL database in real-time.</p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea5.jpg" alt="Programming slide 2">
-                                <p>The News Article page integrates the second CRUD functionality. In this case, the API
-                                    home page was fetched from News API from newsapi.org and users can search or filter
-                                    out related articles.</p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea6.jpg" alt="Programming slide 2">
-                                <p>Unlike API homepage, the Database Homepage enables admins to create, publish, and
-                                    manage custom articles, stored and retrieved directly from the MSSQL database.</p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea7.jpg" alt="Programming slide 2">
-                                <p>Here, admin has the authority to create website by filling the blank by selecting
-                                    topic, inserting headline and contents</p>
-                            </div>
-                            <div class="programming-slideshow-slide">
-                                <img src="assets/sea8.jpg" alt="Programming slide 2">
-                                <p>Here, admin also can modify the news article by inserting news id and insert new
-                                    details or delete the news article by simply inserting news id. </p>
-                            </div>
-                            <!-- Add more slides as needed -->
-                            <button id="programming-prev-slide">&#10094;</button>
-                            <button id="programming-next-slide">&#10095;</button>
-                            <button id="programming-close-slideshow">&times;</button>
-                        </div>
-                    </div>
-
-                    <!-- D4VD's Website -->
-                    <div class="card">
+                    <!-- D4VD's Website - Web Development -->
+                    <div class="card project-card" data-category="web" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">D4VD's Website</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-music"></i></div>
+                                <h3 class="card-title">D4VD's Website</h3>
+                                <p class="card-tag">Web Development</p>
+                            </div>
                             <div class="card-back">
-                                <button id="open-d4vd-slideshow" class="led-button">
-                                    <span>Click here</span>
+                                <p class="project-description">A fan website inspired by TikTok artist D4VD, featuring a dark theme design that mirrors the artist's unique musical style.</p>
+                                <button id="open-d4vd-slideshow" class="led-button" aria-label="Open D4VD Website slideshow">
+                                    <span>View Project</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div id="d4vd-slideshow-overlay" class="hidden">
-                        <div id="d4vd-slideshow-container">
-                            <div class="d4vd-slideshow-slide">
-                                <img src="assets/d4vd1.jpg" alt="d4vd homepage">
-                                <p>In my first project, I designed a website inspired by TikTok artist D4VD, reflecting
-                                    his music styles and themes through a dark color scheme.</p>
-                            </div>
-                            <div class="d4vd-slideshow-slide">
-                                <img src="assets/d4vd2.jpg" alt="d4vd music">
-                                <p>Next, I created an interactive slideshow featuring D4VD's popular songs, allowing new
-                                    listeners to discover and play his music with a single click.</p>
-                            </div>
-                            <div class="d4vd-slideshow-slide">
-                                <img src="assets/d4vd3.jpg" alt="d4vd video">
-                                <p>I added a dedicated section for D4VD's latest music videos, enabling listeners to
-                                    easily access and watch his newest and existing MVs.</p>
-                            </div>
-                            <div class="d4vd-slideshow-slide">
-                                <img src="assets/d4vd4.jpg" alt="d4vd merch">
-                                <p>I designed a merchandise section featuring interactive cards that showcase D4VD's
-                                    products, providing an impressive and organized shopping experience.</p>
-                            </div>
-                            <div class="d4vd-slideshow-slide">
-                                <img src="assets/d4vd5.jpg" alt="d4vd signup">
-                                <p>Finally, I included a subscription feature, allowing fans to sign up for updates on
-                                    D4VD's latest music, merchandise and news, fostering a deeper connection with his
-                                    audience.</p>
-                            </div>
-                            <button id="d4vd-prev-slide">&#10094;</button>
-                            <button id="d4vd-next-slide">&#10095;</button>
-                            <button id="d4vd-close-slideshow">&times;</button>
-                        </div>
-                    </div>
-
-                    <!-- Inflation Atlas -->
-                    <div class="card">
+                    <!-- Inflation Atlas - Web Development -->
+                    <div class="card project-card" data-category="web" tabindex="0">
                         <div class="card-inner">
-                            <div class="card-front">Inflation Atlas</div>
+                            <div class="card-front">
+                                <div class="card-overlay"></div>
+                                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                                <h3 class="card-title">Inflation Atlas</h3>
+                                <p class="card-tag">Web Development</p>
+                            </div>
                             <div class="card-back">
-                                <button id="open-inflation-slideshow" class="led-button">
-                                    <span>Click here</span>
+                                <p class="project-description">An educational website about inflation, featuring minimalist design with animated elements to make complex economic concepts more accessible.</p>
+                                <button id="open-inflation-slideshow" class="led-button" aria-label="Open Inflation Atlas slideshow">
+                                    <span>View Project</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-
-                    <div id="inflation-slideshow-overlay" class="hidden">
-                        <div id="inflation-slideshow-container">
-                            <div class="inflation-slideshow-slide">
-                                <img src="assets/d&s1.jpg" alt="Inflation Atlas 1">
-                                <p>This educational website aims to raise user awareness about inflation through a
-                                    visually engaging, minimalist design, enhanced by Lottie animations and concise,
-                                    informative content.</p>
-                            </div>
-                            <div class="inflation-slideshow-slide">
-                                <img src="assets/d&s2.jpg" alt="Inflation Atlas 2">
-                                <p>The website presents inflation information in a clear, concise, and easily digestible
-                                    format, ensuring complexity-free understanding for users.</p>
-                            </div>
-                            <div class="inflation-slideshow-slide">
-                                <img src="assets/d&s3.jpg" alt="Inflation Atlas 3">
-                                <p>Interactive quizzes gauge user comprehension and reinforce learning in the "Test Your
-                                    Knowledge" section.</p>
-                            </div>
-                            <div class="inflation-slideshow-slide">
-                                <img src="assets/d&s4.jpg" alt="Inflation Atlas 4">
-                                <p>Animated slide-shows of news articles fetched from reputable APIs, balancing visual
-                                    appeal with credible, supplementary information are used to enhance user experience.
-                                </p>
-                            </div>
-                            <div class="inflation-slideshow-slide">
-                                <img src="assets/d&s5.jpg" alt="Inflation Atlas 5">
-                                <p>An interactive SVG map visualizes inflation rates across multiple countries, offering
-                                    a dynamic and engaging way to explore global economic trends.</p>
-                            </div>
-                            <div class="inflation-slideshow-slide">
-                                <img src="assets/d&s6.jpg" alt="Inflation Atlas 6">
-                                <p>The sign-in feature allows users to stay informed about the website's latest updates,
-                                    news, and content additions, enhancing their personalized experience.</p>
-                            </div>
-                            <button id="inflation-prev-slide">&#10094;</button>
-                            <button id="inflation-next-slide">&#10095;</button>
-                            <button id="inflation-close-slideshow">&times;</button>
-                        </div>
-                    </div>
-
                 </div>
+            </section>
+
+            <!-- Contact section -->
+            <section id="contact" class="contact">
+                <p class="section-subtitle">GET IN TOUCH</p>
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:tancaseyy@gmail.com">tancaseyy@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+6587823921">+65 8782 3921</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com/in/casey-tan-wee-liang-0703ba273/" target="_blank" rel="noopener">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" placeholder="Your Name" required aria-label="Your Name">
+                        <input type="email" placeholder="Your Email" required aria-label="Your Email">
+                        <textarea placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
+                        <button type="submit" class="primary-button">Send Message</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <p>&copy; 2025 Casey Tan Wee Liang. All rights reserved.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/casey-tan-wee-liang-0703ba273/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:tancaseyy@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Slideshow Overlays -->
+    <div id="slideshow-overlay" class="slideshow-overlay hidden" aria-hidden="true">
+        <div class="slideshow-container" id="slideshow-container">
+            <div class="slideshow-slide">
+                <img src="assets/SPM - doc.jpg" alt="Project Management Documentation">
+                <p>The project began with creating a comprehensive document outlining all necessary
+                    steps to establish a strong foundation. This documentation phase ensured clarity and
+                    alignment among team members regarding project objectives, scope, and requirements.
+                    The document covered project goals, timelines, roles, and responsibilities.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/SPM - Jira.jpg" alt="Project Management Jira Board">
+                <p>Our team used Jira to track progress and manage tasks effectively. This powerful tool
+                    provided visual progress tracking, clear task assignments, and real-time milestone
+                    monitoring. Jira fostered collaboration, accountability, and a motivated work
+                    environment, ensuring our project stayed on track.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/SPM - game.jpg" alt="Project Management Game Development">
+                <p>The core deliverable of project was the successful development of the game. This
+                    phase involved designing, testing, and refining the game to meet the project's
+                    objectives and requirements.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/SPM - ppt.jpg" alt="Project Management Presentation">
+                <p>We concluded the project with a comprehensive PowerPoint presentation, summarizing
+                    our journey, accomplishments, and key takeaways. The presentation showcased the
+                    game's features, highlighted lessons learned, and provided a final report to
+                    stakeholders, marking the project's successful completion.</p>
+            </div>
+            <button id="prev-slide" class="slide-nav" aria-label="Previous slide">&#10094;</button>
+            <button id="next-slide" class="slide-nav" aria-label="Next slide">&#10095;</button>
+            <button id="close-slideshow" class="close-slideshow" aria-label="Close slideshow">&times;</button>
+        </div>
+    </div>
+
+    <div id="aws-slideshow-overlay" class="slideshow-overlay hidden" aria-hidden="true">
+        <div class="slideshow-container" id="aws-slideshow-container">
+            <!-- AWS slideshow content -->
+            <div class="slideshow-slide">
+                <img src="assets/CAT - doc.jpg" alt="Cloud Documentation">
+                <p>Our AWS cloud project began with a comprehensive document outlining our strategy and
+                    progress tracking. This clarity ensured alignment among team members.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/CAT - server.jpg" alt="Cloud Tier Application">
+                <p>Next, we designed network architectures for tier and serverless applications. The
+                    tier application featured a traditional, multi-layered infrastructure, while the
+                    serverless design leveraged AWS Lambda functions and API Gateway for scalability and
+                    reduced overhead.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/CAT - serverless.jpg" alt="Cloud Serverless Application">
+                <p>Our serverless architecture leveraged AWS Lambda, API Gateway, and DynamoDB to create a highly scalable and cost-effective solution with minimal operational overhead.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/CAT - slides.jpg" alt="Cloud Presentation Slides">
+                <p>Upon completion, we created a concise slide presentation summarizing our technical
+                    decisions, architectural designs, and key takeaways. This final deliverable
+                    showcased our expertise in designing and deploying secure, scalable cloud-based
+                    solutions on AWS.</p>
+            </div>
+            <button id="aws-prev-slide" class="slide-nav" aria-label="Previous slide">&#10094;</button>
+            <button id="aws-next-slide" class="slide-nav" aria-label="Next slide">&#10095;</button>
+            <button id="aws-close-slideshow" class="close-slideshow" aria-label="Close slideshow">&times;</button>
+        </div>
+    </div>
+
+    <!-- Additional slideshows (programming, d4vd, inflation) -->
+    <div id="programming-slideshow-overlay" class="slideshow-overlay hidden" aria-hidden="true">
+        <div class="slideshow-container" id="programming-slideshow-container">
+            <!-- Programming slideshow content -->
+            <div class="slideshow-slide">
+                <img src="assets/sea1.jpg" alt="Southeast Asia Readiness - Login Page">
+                <p>Created a Southeast Asia readiness educational website utilizing MVC backend
+                    architecture and auth.js for user authentication, distinguishing between guest and
+                    admin access.</p>
             </div>
 
-            <script src="script.js"></script>
+            <div class="slideshow-slide">
+                <img src="assets/sea2.jpg" alt="Programming slide 2">
+                <p>Upon successful login, users are directed to the dynamic homepage, featuring a
+                    slideshow-like background that transitions intervally, showcasing multiple images.
+                </p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/sea3.jpg" alt="Programming slide 2">
+                <p>After clicking "Blog Posts", the system utilizes CRUD functionality to retrieve and
+                    display blog entries from the MSSQL database.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/sea4.jpg" alt="Programming slide 2">
+                <p>Users can perform CRUD operations (Create, Update, Delete) on blog posts, dynamically
+                    updating the MSSQL database in real-time.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/sea5.jpg" alt="Programming slide 2">
+                <p>The News Article page integrates the second CRUD functionality. In this case, the API
+                    home page was fetched from News API from newsapi.org and users can search or filter
+                    out related articles.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/sea6.jpg" alt="Programming slide 2">
+                <p>Unlike API homepage, the Database Homepage enables admins to create, publish, and
+                    manage custom articles, stored and retrieved directly from the MSSQL database.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/sea7.jpg" alt="Programming slide 2">
+                <p>Here, admin has the authority to create website by filling the blank by selecting
+                    topic, inserting headline and contents</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/sea8.jpg" alt="Programming slide 2">
+                <p>Here, admin also can modify the news article by inserting news id and insert new
+                    details or delete the news article by simply inserting news id. </p>
+            </div>
+
+            <!-- Additional slides -->
+            <button id="programming-prev-slide" class="slide-nav" aria-label="Previous slide">&#10094;</button>
+            <button id="programming-next-slide" class="slide-nav" aria-label="Next slide">&#10095;</button>
+            <button id="programming-close-slideshow" class="close-slideshow" aria-label="Close slideshow">&times;</button>
+        </div>
+    </div>
+
+    <div id="d4vd-slideshow-overlay" class="slideshow-overlay hidden" aria-hidden="true">
+        <div class="slideshow-container" id="d4vd-slideshow-container">
+            <!-- D4VD slideshow content -->
+            <div class="slideshow-slide">
+                <img src="assets/d4vd1.jpg" alt="D4VD Website Homepage">
+                <p>In my first project, I designed a website inspired by TikTok artist D4VD, reflecting
+                    his music styles and themes through a dark color scheme.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d4vd2.jpg" alt="d4vd music">
+                <p>Next, I created an interactive slideshow featuring D4VD's popular songs, allowing new
+                    listeners to discover and play his music with a single click.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d4vd3.jpg" alt="d4vd video">
+                <p>I added a dedicated section for D4VD's latest music videos, enabling listeners to
+                    easily access and watch his newest and existing MVs.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d4vd4.jpg" alt="d4vd merch">
+                <p>I designed a merchandise section featuring interactive cards that showcase D4VD's
+                    products, providing an impressive and organized shopping experience.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d4vd5.jpg" alt="d4vd signup">
+                <p>Finally, I included a subscription feature, allowing fans to sign up for updates on
+                    D4VD's latest music, merchandise and news, fostering a deeper connection with his
+                    audience.</p>
+            </div>
+            <!-- Additional slides -->
+            <button id="d4vd-prev-slide" class="slide-nav" aria-label="Previous slide">&#10094;</button>
+            <button id="d4vd-next-slide" class="slide-nav" aria-label="Next slide">&#10095;</button>
+            <button id="d4vd-close-slideshow" class="close-slideshow" aria-label="Close slideshow">&times;</button>
+        </div>
+    </div>
+
+    <div id="inflation-slideshow-overlay" class="slideshow-overlay hidden" aria-hidden="true">
+        <div class="slideshow-container" id="inflation-slideshow-container">
+            <!-- Inflation slideshow content -->
+            <div class="slideshow-slide">
+                <img src="assets/d&s1.jpg" alt="Inflation Atlas - Homepage">
+                <p>This educational website aims to raise user awareness about inflation through a
+                    visually engaging, minimalist design, enhanced by Lottie animations and concise,
+                    informative content.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d&s2.jpg" alt="Inflation Atlas 2">
+                <p>The website presents inflation information in a clear, concise, and easily digestible
+                    format, ensuring complexity-free understanding for users.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d&s3.jpg" alt="Inflation Atlas 3">
+                <p>Interactive quizzes gauge user comprehension and reinforce learning in the "Test Your
+                    Knowledge" section.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d&s4.jpg" alt="Inflation Atlas 4">
+                <p>Animated slide-shows of news articles fetched from reputable APIs, balancing visual
+                    appeal with credible, supplementary information are used to enhance user experience.
+                </p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d&s5.jpg" alt="Inflation Atlas 5">
+                <p>An interactive SVG map visualizes inflation rates across multiple countries, offering
+                    a dynamic and engaging way to explore global economic trends.</p>
+            </div>
+            <div class="slideshow-slide">
+                <img src="assets/d&s6.jpg" alt="Inflation Atlas 6">
+                <p>The sign-in feature allows users to stay informed about the website's latest updates,
+                    news, and content additions, enhancing their personalized experience.</p>
+            </div>
+            <!-- Additional slides -->
+            <button id="inflation-prev-slide" class="slide-nav" aria-label="Previous slide">&#10094;</button>
+            <button id="inflation-next-slide" class="slide-nav" aria-label="Next slide">&#10095;</button>
+            <button id="inflation-close-slideshow" class="close-slideshow" aria-label="Close slideshow">&times;</button>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script defer src="script.js"></script>
 </body>
 
 </html>

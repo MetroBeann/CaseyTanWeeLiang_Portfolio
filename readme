@@ -1,0 +1,52 @@
+<!-- Tech Stack Icons -->
+                <div class="tech-stack">
+                    <h3>My Technology Stack</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon" title="GitHub">
+                            <img src="assets/tech/github.png" alt="https://github.com/logos">
+                        </div>
+                        <div class="tech-icon" title="Visual Studio Code">
+                            <img src="assets/tech/vscode.png" alt="https://code.visualstudio.com/brand">
+                        </div>
+                        <div class="tech-icon" title="Visual Studio">
+                            <img src="assets/tech/visual-studio.png" alt="https://seeklogo.com/vector-logo/453471/visual-studio-icon-2022">
+                        </div>
+                        <div class="tech-icon" title="Python">
+                            <img src="assets/tech/python.png" alt="https://www.python.org/community/logos/">
+                        </div>
+                        <div class="tech-icon" title="C#">
+                            <img src="assets/tech/csharp.png" alt="https://techicons.dev/icons/csharp">
+                        </div>
+                        <div class="tech-icon" title="HTML5">
+                            <img src="assets/tech/HTML5.png" alt="https://techicons.dev/icons/html5">
+                        </div>
+                        <div class="tech-icon" title="CSS3">
+                            <img src="assets/tech/CSS3.png" alt="https://techicons.dev/icons/css3">
+                        </div>
+                        <div class="tech-icon" title="JavaScript">
+                            <img src="assets/tech/javascript.png" alt="https://techicons.dev/icons/javascript">
+                        </div>
+                        <div class="tech-icon" title="Bootstrap">
+                            <img src="assets/tech/Bootstrap.png" alt="https://techicons.dev/icons/bootstrap">
+                        </div>
+                        <div class="tech-icon" title="Node.js">
+                            <img src="assets/tech/Node.js.png" alt="https://techicons.dev/icons/nodejs">
+                        </div>
+                        <div class="tech-icon" title="AWS">
+                            <img src="assets/tech/AWS.png" alt="https://techicons.dev/icons/amazonwebservices">
+                        </div>
+                        <div class="tech-icon" title="Canva">
+                            <img src="assets/tech/Canva.png" alt="https://techicons.dev/icons/canva">
+                        </div>
+                        <div class="tech-icon" title="Figma">
+                            <img src="assets/tech/Figma.png" alt="https://techicons.dev/icons/figma">
+                        </div>
+                        <div class="tech-icon" title="Go">
+                            <img src="assets/tech/Go.png" alt="https://techicons.dev/icons/go">
+                        </div>
+                        <div class="tech-icon" title="PostgresSQL">
+                            <img src="assets/tech/PostgresSQL.png" alt="https://techicons.dev/icons/postgresql">
+                        </div>
+                      
+                    </div>
+                </div>
