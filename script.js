@@ -518,6 +518,70 @@ function initializeSlideshows() {
             prevBtn: 'inflation-prev-slide',
             nextBtn: 'inflation-next-slide',
             container: 'inflation-slideshow-container'
+        },
+        {
+            openBtn: 'open-ad-distribution-slideshow',
+            overlay: 'ad-distribution-slideshow-overlay',
+            closeBtn: 'ad-distribution-close-slideshow',
+            prevBtn: 'ad-distribution-prev-slide',
+            nextBtn: 'ad-distribution-next-slide',
+            container: 'ad-distribution-slideshow-container'
+        },
+        {
+            openBtn: 'open-elderly-slideshow',
+            overlay: 'elderly-slideshow-overlay',
+            closeBtn: 'elderly-close-slideshow',
+            prevBtn: 'elderly-prev-slide',
+            nextBtn: 'elderly-next-slide',
+            container: 'elderly-slideshow-container'
+        },
+        {
+            openBtn: 'open-reachout-slideshow',
+            overlay: 'reachout-slideshow-overlay',
+            closeBtn: 'reachout-close-slideshow',
+            prevBtn: 'reachout-prev-slide',
+            nextBtn: 'reachout-next-slide',
+            container: 'reachout-slideshow-container'
+        },
+        {
+            openBtn: 'open-npath-slideshow',
+            overlay: 'npath-slideshow-overlay',
+            closeBtn: 'npath-close-slideshow',
+            prevBtn: 'npath-prev-slide',
+            nextBtn: 'npath-next-slide',
+            container: 'npath-slideshow-container'
+        },
+        {
+            openBtn: 'open-canva-slideshow',
+            overlay: 'canva-slideshow-overlay',
+            closeBtn: 'canva-close-slideshow',
+            prevBtn: 'canva-prev-slide',
+            nextBtn: 'canva-next-slide',
+            container: 'canva-slideshow-container'
+        },
+        {
+            openBtn: 'open-gait-slideshow',
+            overlay: 'gait-slideshow-overlay',
+            closeBtn: 'gait-close-slideshow',
+            prevBtn: 'gait-prev-slide',
+            nextBtn: 'gait-next-slide',
+            container: 'gait-slideshow-container'
+        },
+        {
+            openBtn: 'open-frailty-slideshow',
+            overlay: 'frailty-slideshow-overlay',
+            closeBtn: 'frailty-close-slideshow',
+            prevBtn: 'frailty-prev-slide',
+            nextBtn: 'frailty-next-slide',
+            container: 'frailty-slideshow-container'
+        },
+        {
+            openBtn: 'open-cloud-db-slideshow',
+            overlay: 'cloud-db-slideshow-overlay',
+            closeBtn: 'cloud-db-close-slideshow',
+            prevBtn: 'cloud-db-prev-slide',
+            nextBtn: 'cloud-db-next-slide',
+            container: 'cloud-db-slideshow-container'
         }
     ];
     

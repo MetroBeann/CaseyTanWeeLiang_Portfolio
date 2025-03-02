@@ -952,13 +952,21 @@ body {
 /* Specific positioning for prev/next buttons */
 #prev-slide, #aws-prev-slide, 
 #programming-prev-slide, #d4vd-prev-slide, 
-#inflation-prev-slide {
+#inflation-prev-slide, #ad-distribution-prev-slide,
+#elderly-prev-slide, #reachout-prev-slide,
+#npath-prev-slide, #canva-prev-slide,
+#gait-prev-slide, #frailty-prev-slide,
+#cloud-db-prev-slide{
   left: 20px;
 }
 
 #next-slide, #aws-next-slide, 
 #programming-next-slide, #d4vd-next-slide, 
-#inflation-next-slide {
+#inflation-next-slide, #ad-distribution-next-slide,
+#elderly-next-slide, #reachout-next-slide,
+#npath-next-slide, #canva-next-slide,
+#gait-next-slide, #frailty-next-slide,
+#cloud-db-next-slide{
   right: 20px;
 }
 
