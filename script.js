@@ -536,22 +536,6 @@ function initializeSlideshows() {
             container: 'elderly-slideshow-container'
         },
         {
-            openBtn: 'open-reachout-slideshow',
-            overlay: 'reachout-slideshow-overlay',
-            closeBtn: 'reachout-close-slideshow',
-            prevBtn: 'reachout-prev-slide',
-            nextBtn: 'reachout-next-slide',
-            container: 'reachout-slideshow-container'
-        },
-        {
-            openBtn: 'open-npath-slideshow',
-            overlay: 'npath-slideshow-overlay',
-            closeBtn: 'npath-close-slideshow',
-            prevBtn: 'npath-prev-slide',
-            nextBtn: 'npath-next-slide',
-            container: 'npath-slideshow-container'
-        },
-        {
             openBtn: 'open-canva-slideshow',
             overlay: 'canva-slideshow-overlay',
             closeBtn: 'canva-close-slideshow',
